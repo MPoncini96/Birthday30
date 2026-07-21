@@ -22,12 +22,12 @@ const faqs = [
   {
     question: "What time should I arrive?",
     answer:
-      "Earlier on Friday is easiest for setup, but staggered arrivals are totally fine. The main goal is getting campsites 3 and 4 settled in smoothly."
+      "Friday is the best. Tallon and I will be there earlier on Friday, since we don't work or anything crazy like that.  Some will be leaving early Saturday morning.  It's up to you when you want to arrive, but earlier the better!"
   },
   {
     question: "What happens at night?",
     answer:
-      "Campfire time, drinks, marshmallows, music, and a slower hang under the trees. Bring warm layers because it can cool off fast after sunset."
+      "Getting shmooozy. Campfire time, marshmallows, some drinking, and a slower hang under the trees. Bring warm layers because it can cool off fast after sunset."
   }
 ];
 

@@ -1,28 +1,6 @@
 import Image from "next/image";
 
-import unionOne from "../../Photos/UnionRes/Union1.webp";
-import unionThree from "../../Photos/UnionRes/union3.jpg";
-import unionFive from "../../Photos/UnionRes/Union5.webp";
-import unionSix from "../../Photos/UnionRes/Union6.webp";
-
-const unionSlides = [
-  {
-    image: unionOne,
-    alt: "Union Reservoir shoreline"
-  },
-  {
-    image: unionThree,
-    alt: "Union Reservoir forest scene"
-  },
-  {
-    image: unionFive,
-    alt: "Union Reservoir lake at golden hour"
-  },
-  {
-    image: unionSix,
-    alt: "Union Reservoir weekend adventure view"
-  }
-];
+import { unionSlides } from "./union-slides";
 
 export function UnionSlideshow() {
   return (

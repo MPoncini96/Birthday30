@@ -50,6 +50,79 @@ body::before {
 a {
   color: inherit;
 }
+body.page-is-loading {
+  overflow: hidden;
+}
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at top, rgba(103, 153, 108, 0.28), transparent 32%),
+    linear-gradient(180deg, #10241b 0%, #0c1d15 42%, #08150f 100%);
+  transition: opacity 320ms ease, visibility 320ms ease;
+}
+
+.loading-screen--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loading-screen__content {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+  color: #eff6ec;
+}
+
+.loading-screen__trees {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.loading-screen__tree {
+  width: clamp(3.5rem, 8vw, 5rem);
+  height: auto;
+  opacity: 0.92;
+  filter: invert(92%) sepia(18%) saturate(179%) hue-rotate(53deg) brightness(103%) contrast(95%);
+  animation: loading-sway 1.8s ease-in-out infinite;
+}
+
+.loading-screen__tree--left {
+  animation-delay: 0s;
+}
+
+.loading-screen__tree--center {
+  width: clamp(4.75rem, 10vw, 6.5rem);
+  animation-delay: 0.18s;
+}
+
+.loading-screen__tree--right {
+  animation-delay: 0.36s;
+}
+
+.loading-screen__eyebrow {
+  margin: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #a8d08d;
+}
+
+.loading-screen h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.95;
+}
 
 .page-shell {
   position: relative;
@@ -708,6 +781,17 @@ a {
   color: rgba(239, 246, 236, 0.82);
 }
 
+@keyframes loading-sway {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-0.35rem) scale(1.03);
+  }
+}
+
 @keyframes union-fade {
   0% {
     opacity: 0;
@@ -843,6 +927,8 @@ a {
     grid-column: auto;
   }
 }
+
+
 
 
 
