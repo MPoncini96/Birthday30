@@ -2,22 +2,22 @@ const faqs = [
   {
     question: "What should I bring?",
     answer:
-      "Bring camping basics, layers for colder nights, sunscreen, swim gear, a water bottle, and anything you want for lake time or campfire lounging. The campsites have bear boxes, and there is no potable water, so bring the water you need."
+      "Camping stuff."
   },
   {
     question: "What is the plan for food?",
     answer:
-      "There will be shared cooking time, easy camp meals, and snack-friendly downtime. It helps to bring your own drinks plus anything specific you want for breakfast or late-night campfire snacks."
+      "Be on your own for food. Coordinate with others, but I don't want to coordinate a master food plan.  This could be groupchat stuff."
   },
   {
     question: "Do I need to hike?",
     answer:
-      "No. The weekend is flexible, so you can join the Bull Run Lake trail plan, hang at camp, or stay by the water depending on energy and weather."
+      "No. Stay back at camp. Hiking is for the fit and brave, that may not be you."
   },
   {
     question: "Can I swim or kayak?",
     answer:
-      "Yes. Lake time is part of the plan, so bring swim stuff, towels, and any paddle gear you want to use if conditions are good."
+      "Yes. Encouraged.  Hoping Evan brings his kayak.  If not, he should let me know and I can see what I can do."
   },
   {
     question: "What time should I arrive?",
@@ -27,7 +27,12 @@ const faqs = [
   {
     question: "What happens at night?",
     answer:
-      "Getting shmooozy. Campfire time, marshmallows, some drinking, and a slower hang under the trees. Bring warm layers because it can cool off fast after sunset."
+      "Getting shmooozy. Campfire, marshmallows, some drinking, and a slower hang under the trees. Bring warm layers because it can cool off fast after sunset."
+  },
+  {
+    question: "How much money do I owe Ponce?",
+    answer:
+      "That is a great question. The campsites were $120 total. Feel free to send me whatever the split is after the trip"
   }
 ];
 
