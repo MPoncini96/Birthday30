@@ -1,0 +1,860 @@
+:root {
+  --background: #08150f;
+  --foreground: #eff6ec;
+  --muted: #c5d7c6;
+  --card-border: rgba(225, 242, 222, 0.14);
+  --accent: #a8d08d;
+  --shadow: 0 24px 60px rgba(7, 20, 14, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #08150f !important;
+  background-color: #08150f !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(circle at top, rgba(103, 153, 108, 0.22), transparent 30%),
+    linear-gradient(180deg, #10241b 0%, #0c1d15 42%, #08150f 100%) !important;
+  color: var(--foreground);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/BackgroundTrees/182-1826674_evergreen-tree-clipart-pine-tree-clipart-black-and-white.png");
+  background-repeat: repeat;
+  background-size: 170px auto;
+  background-position: 70px 90px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1280px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3rem 0 6rem;
+}
+
+.union-slideshow {
+  margin-bottom: 2rem;
+}
+
+.union-slideshow__frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 34rem;
+  border: 1px solid rgba(225, 242, 222, 0.12);
+  border-radius: 36px;
+  box-shadow: var(--shadow);
+  background: #294537;
+}
+
+.union-slideshow__stack {
+  position: absolute;
+  inset: 0;
+}
+
+.union-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: union-fade 16s infinite;
+}
+
+.union-slide__image {
+  object-fit: cover;
+  object-position: center center;
+}
+.bottom-slideshow {
+  margin-top: 2rem;
+}
+
+.bottom-slideshow__frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 36rem;
+  border: 1px solid rgba(225, 242, 222, 0.12);
+  border-radius: 36px;
+  box-shadow: var(--shadow);
+  background: #294537;
+}
+
+.bottom-slideshow__stack {
+  position: absolute;
+  inset: 0;
+}
+
+.bottom-slideshow__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: hero-fade 91s infinite;
+}
+
+.bottom-slideshow__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(30rem, 44rem);
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 0 2rem;
+  color: #ffffff;
+}
+
+.hero__copy {
+  min-width: 0;
+}
+
+.hero__photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(225, 242, 222, 0.12);
+  border-radius: 32px;
+  background: rgba(205, 229, 201, 0.16);
+  box-shadow: var(--shadow);
+}
+
+.hero__photo-wrap--slideshow {
+  min-height: 38rem;
+}
+
+.hero__slideshow {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: hero-fade 63s infinite;
+}
+
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.eyebrow,
+.card-kicker {
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.hero h1 {
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(3.25rem, 6.6vw, 5.85rem);
+  line-height: 0.95;
+  color: #ffffff;
+}
+
+.intro {
+  max-width: 44rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.4rem;
+  line-height: 1.75;
+  color: #ffffff;
+}
+
+.reservation-card,
+.invitees-section,
+.hike-section,
+.itinerary-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 32px;
+  box-shadow: var(--shadow);
+}
+
+.reservation-card {
+  background: linear-gradient(135deg, rgba(36, 70, 52, 0.92), rgba(23, 48, 35, 0.96));
+  color: #ffffff;
+}
+
+.invitees-section,
+.hike-section,
+.itinerary-section {
+  background:
+    linear-gradient(145deg, rgba(220, 237, 214, 0.96), rgba(194, 220, 189, 0.92)),
+    radial-gradient(circle at top right, rgba(119, 168, 115, 0.22), transparent 32%);
+  color: #000000;
+}
+
+.reservation-card__header,
+.invitees-section__header,
+.hike-section__header,
+.itinerary-section__header {
+  max-width: 46rem;
+}
+
+.reservation-card__header h2,
+.invitees-section__header h2,
+.hike-section__header h2,
+.itinerary-section__header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.hike-section__title {
+  white-space: nowrap;
+}
+
+.reservation-card__header h2,
+.reservation-card__intro,
+.reservation-card .card-kicker,
+.reservation-card dt,
+.reservation-card dd,
+.reservation-card dd small,
+.reservation-panel,
+.reservation-panel * {
+  color: #ffffff;
+}
+
+.invitees-section__header h2,
+.invitees-section__header .card-kicker,
+.invitee-card,
+.invitee-card__content h3,
+.invitee-card__content p,
+.hike-section__header h2,
+.hike-section__header .card-kicker,
+.hike-card,
+.hike-card h3,
+.hike-card p,
+.feature-card,
+.feature-card h2,
+.feature-card p,
+.itinerary-section__header h2,
+.itinerary-section__header .card-kicker,
+.itinerary-day,
+.itinerary-day h3,
+.itinerary-day h4,
+.itinerary-day p,
+.itinerary-item,
+.itinerary-item p {
+  color: #000000;
+}
+
+.reservation-card__intro,
+.itinerary-section__intro {
+  margin: 1rem 0 0;
+  line-height: 1.7;
+}
+
+.reservation-card__intro {
+  color: #ffffff;
+}
+
+.itinerary-section__intro {
+  max-width: 38rem;
+  color: #24392d;
+}
+
+.reservation-card__grid {
+  display: grid;
+  grid-template-columns: minmax(30rem, 44rem) minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 1.75rem;
+  align-items: stretch;
+}
+
+.reservation-slideshow {
+  position: relative;
+  overflow: hidden;
+  min-height: 42rem;
+  border: 1px solid rgba(225, 242, 222, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.reservation-slideshow__stack {
+  position: absolute;
+  inset: 0;
+}
+
+.reservation-slideshow__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: hero-fade 63s infinite;
+}
+
+.reservation-slideshow__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.reservation-panel {
+  padding: 1.75rem;
+  border: 1px solid rgba(225, 242, 222, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.detail-list {
+  margin: 0;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: minmax(0, 12.5rem) minmax(0, 1fr);
+  gap: 1.15rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(225, 242, 222, 0.16);
+}
+
+.detail-row:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.detail-row dt {
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+
+.detail-row dd {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0;
+  font-size: 1.18rem;
+  font-weight: 600;
+}
+
+.detail-row dd small {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.reservation-link-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(225, 242, 222, 0.16);
+}
+
+.reservation-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff !important;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.reservation-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.invitees-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.invitee-card {
+  overflow: hidden;
+  border: 1px solid rgba(22, 48, 36, 0.1);
+  border-radius: 24px;
+  background: rgba(242, 248, 239, 0.58);
+}
+
+.invitee-card--featured {
+  grid-column: span 2;
+}
+
+.invitee-card__photo-wrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.invitee-card--featured .invitee-card__photo-wrap {
+  aspect-ratio: 16 / 10;
+}
+
+.invitee-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.invitee-card__photo--top-focus {
+  object-position: center top !important;
+}
+
+.invitee-card__content {
+  padding: 1rem 1rem 1.15rem;
+}
+
+.invitee-card__content h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.invitee-card__content p {
+  margin: 0.45rem 0 0;
+  line-height: 1.55;
+}
+
+.hike-card {
+  margin-top: 1.5rem;
+  padding: 1.35rem;
+  border: 1px solid rgba(22, 48, 36, 0.1);
+  border-radius: 24px;
+  background: rgba(242, 248, 239, 0.58);
+}
+
+.hike-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.hike-card p {
+  margin: 0.6rem 0 0;
+  line-height: 1.65;
+  color: #354b3d;
+}
+.hike-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hike-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(22, 48, 36, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.hike-stat strong {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.hike-stat span {
+  font-size: 0.88rem;
+  color: #3a5142;
+}
+
+.hike-download-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(36, 57, 45, 0.1);
+  color: #1f4b2f;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hike-download-link:hover {
+  text-decoration: underline;
+}
+
+.itinerary-download-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(36, 57, 45, 0.1);
+  color: #1f4b2f;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.itinerary-download-link:hover {
+  text-decoration: underline;
+}
+
+.hike-preview {
+  margin-top: 1.25rem;
+}
+
+.hike-preview__label {
+  margin: 0 0 0.75rem;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3e5b47;
+}
+
+.hike-preview__frame {
+  width: 100%;
+  min-height: 42rem;
+  border: 1px solid rgba(22, 48, 36, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.itinerary-day {
+  padding: 1.5rem;
+  border: 1px solid rgba(22, 48, 36, 0.1);
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(235, 244, 232, 0.74));
+}
+
+.itinerary-day__header {
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(22, 48, 36, 0.12);
+}
+
+.itinerary-day__date {
+  margin: 0 0 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3e5b47;
+}
+
+.itinerary-day__header h3 {
+  margin: 0;
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+.itinerary-day__header p {
+  margin: 0.7rem 0 0;
+  line-height: 1.6;
+  color: #3a5142;
+}
+
+.itinerary-day__items {
+  display: grid;
+  gap: 0.95rem;
+  margin-top: 1.1rem;
+}
+
+.itinerary-item {
+  padding: 1rem 1.05rem;
+  border: 1px solid rgba(22, 48, 36, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.itinerary-item h4 {
+  margin: 0;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+}
+
+.itinerary-item p {
+  margin: 0.4rem 0 0;
+  line-height: 1.6;
+  color: #354b3d;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  grid-column: span 4;
+  min-height: 240px;
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  background: rgba(214, 233, 208, 0.88);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.feature-card--wide {
+  grid-column: span 12;
+  min-height: 0;
+}
+
+.feature-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.feature-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.faq-footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid rgba(225, 242, 222, 0.14);
+  border-radius: 32px;
+  background:
+    linear-gradient(145deg, rgba(18, 34, 25, 0.96), rgba(10, 21, 15, 0.98)),
+    radial-gradient(circle at top left, rgba(119, 168, 115, 0.2), transparent 34%);
+  box-shadow: var(--shadow);
+  color: #eff6ec;
+}
+
+.faq-footer__header {
+  max-width: 42rem;
+}
+
+.faq-footer__header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  color: #ffffff;
+}
+
+.faq-footer__intro {
+  margin: 1rem 0 0;
+  line-height: 1.7;
+  color: rgba(239, 246, 236, 0.82);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.faq-card {
+  padding: 1.2rem 1.25rem;
+  border: 1px solid rgba(225, 242, 222, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.faq-card p {
+  margin: 0.55rem 0 0;
+  line-height: 1.65;
+  color: rgba(239, 246, 236, 0.82);
+}
+
+@keyframes union-fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  6% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  31% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes hero-fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+
+  2% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  5% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  7% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__photo-wrap {
+    max-width: 44rem;
+  }
+
+  .invitees-grid,
+  .itinerary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .page-shell {
+    width: min(100% - 1.25rem, 42rem);
+    padding: 1.25rem 0 4rem;
+  }
+
+  .union-slideshow__frame,
+  .hero__photo-wrap--slideshow,
+  .bottom-slideshow__frame,
+  .reservation-slideshow {
+    min-height: 25rem;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+  }
+
+  .hero__photo-wrap {
+    max-width: 100%;
+  }
+
+  .reservation-card,
+  .invitees-section,
+  .hike-section,
+  .itinerary-section,
+  .faq-footer {
+    padding: 1.25rem;
+  }
+
+  .hike-section__title {
+    white-space: normal;
+  }
+
+  .hero__photo,
+  .union-slide__image,
+  .bottom-slideshow__image,
+  .reservation-slideshow__image {
+    object-position: center center !important;
+  }
+
+  .reservation-card__grid,
+  .invitees-grid,
+  .itinerary-grid,
+  .content-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invitee-card--featured {
+    grid-column: auto;
+  }
+
+  .invitee-card--featured .invitee-card__photo-wrap {
+    aspect-ratio: 4 / 5;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .feature-card,
+  .feature-card--wide {
+    grid-column: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
