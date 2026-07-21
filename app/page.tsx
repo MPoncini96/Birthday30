@@ -4,6 +4,7 @@ import { BottomSlideshow } from "./components/bottom-slideshow";
 import { FaqFooter } from "./components/faq-footer";
 import { Invitees } from "./components/invitees";
 import { LoadingGate } from "./components/loading-gate";
+import { LogoutButton } from "./components/logout-button";
 import { ReservationDetails } from "./components/reservation-details";
 import { slideshowImages } from "./components/slideshow-images";
 import { UnionSlideshow } from "./components/union-slideshow";
@@ -17,6 +18,8 @@ const preloadSources = [
 export default function Home() {
   return (
     <LoadingGate imageSources={preloadSources}>
+      <LogoutButton />
+
       <main className="page-shell">
         <UnionSlideshow />
 

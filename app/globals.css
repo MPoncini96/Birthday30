@@ -123,6 +123,161 @@ body.page-is-loading {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 0.95;
 }
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.login-shell {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  width: min(100%, 34rem);
+  text-align: center;
+  color: #eff6ec;
+}
+
+.login-card__trees {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.login-card__tree {
+  width: clamp(3.5rem, 8vw, 5rem);
+  height: auto;
+  opacity: 0.92;
+  filter: invert(92%) sepia(18%) saturate(179%) hue-rotate(53deg) brightness(103%) contrast(95%);
+  animation: loading-sway 1.8s ease-in-out infinite;
+}
+
+.login-card__tree--left {
+  animation-delay: 0s;
+}
+
+.login-card__tree--center {
+  width: clamp(4.75rem, 10vw, 6.5rem);
+  animation-delay: 0.18s;
+}
+
+.login-card__tree--right {
+  animation-delay: 0.36s;
+}
+
+.login-card__eyebrow {
+  margin: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #a8d08d;
+}
+
+.login-shell h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  line-height: 0.95;
+}
+
+.login-card__copy {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(239, 246, 236, 0.82);
+}
+
+.login-card__form {
+  display: grid;
+  gap: 0.85rem;
+  width: min(100%, 24rem);
+  margin-top: 0.5rem;
+}
+
+.login-card__label {
+  text-align: left;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a8d08d;
+}
+
+.login-card__input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(225, 242, 222, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #eff6ec;
+  font: inherit;
+}
+
+.login-card__input::placeholder {
+  color: rgba(239, 246, 236, 0.5);
+}
+
+.login-card__button {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 0.35rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(225, 242, 222, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #eff6ec;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.login-card__button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.login-card__error {
+  margin: 0;
+  text-align: left;
+  color: #ffb8b8;
+  font-size: 0.95rem;
+}
+.logout-button {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 120;
+}
+
+.logout-button__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(225, 242, 222, 0.16);
+  border-radius: 999px;
+  background: rgba(12, 29, 21, 0.78);
+  box-shadow: var(--shadow);
+  color: #eff6ec;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+
+.logout-button__trigger:hover {
+  background: rgba(18, 40, 29, 0.88);
+}
+
+.logout-button__icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
 
 .page-shell {
   position: relative;
@@ -927,6 +1082,9 @@ body.page-is-loading {
     grid-column: auto;
   }
 }
+
+
+
 
 
 
