@@ -15,7 +15,6 @@ import tallon from "../../Photos/Tallon.jpg";
 
 type Invitee = {
   name: string;
-  note: string;
   photo?: StaticImageData;
   mediaSrc?: string;
   photoPosition?: string;
@@ -27,45 +26,37 @@ type Invitee = {
 const invitees: Invitee[] = [
   {
     name: "Matthew",
-    note: "Birthday captain",
     photo: matthew
   },
   {
     name: "Tallon",
-    note: "Camp setup specialist",
     photo: tallon
   },
   {
     name: "Cisco & Kara",
-    note: "Double campsite duo",
     photo: ciscoAndKara,
     featured: true
   },
   {
     name: "Greg",
-    note: "Weekend crew",
     photo: greg,
     photoPosition: "30% center"
   },
   {
     name: "Juli",
-    note: "Adventure crew",
     photo: juli
   },
   {
     name: "Evan & Erin",
-    note: "Reservoir regulars",
     photo: evanAndErin,
     featured: true
   },
   {
     name: "Michael",
-    note: "Campfire committee",
     photo: michael
   },
   {
     name: "Sam & Taylor",
-    note: "Golden hour team",
     photo: samAndTaylor,
     photoPosition: "center top",
     photoClassName: "invitee-card__photo--top-focus",
@@ -73,28 +64,23 @@ const invitees: Invitee[] = [
   },
   {
     name: "Verdot",
-    note: "Animated VIP cameo",
     mediaSrc: "/gifs/Verdot.gif"
   },
   {
     name: "Kelly",
-    note: "Birthday weekend crew",
     photo: kelly
   },
   {
     name: "Leo",
-    note: "Lake day energy",
     photo: leo,
     photoScale: 1.32
   },
   {
     name: "Luca",
-    note: "Birthday weekend crew",
     photo: luca
   },
   {
     name: "Jason",
-    note: "Birthday weekend crew",
     photo: jason
   }
 ];
@@ -104,7 +90,7 @@ export function Invitees() {
     <section className="invitees-section" aria-labelledby="invitees-heading">
       <div className="invitees-section__header">
         <p className="card-kicker">Who's going</p>
-        <h2 id="invitees-heading">The birthday weekend lineup</h2>
+        <h2 id="invitees-heading">Attendees</h2>
       </div>
 
       <div className="invitees-grid">
@@ -136,7 +122,6 @@ export function Invitees() {
             </div>
             <div className="invitee-card__content">
               <h3>{invitee.name}</h3>
-              <p>{invitee.note}</p>
             </div>
           </article>
         ))}

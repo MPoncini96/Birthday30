@@ -3,7 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Thirty",
-  description: "A 30th birthday site built with Next.js."
+  description: "A 30th birthday site built with Next.js.",
+  icons: {
+    icon: "/BackgroundTrees/182-1826674_evergreen-tree-clipart-pine-tree-clipart-black-and-white.png"
+  }
 };
 
 export default function RootLayout({
@@ -17,3 +20,4 @@ export default function RootLayout({
     </html>
   );
 }
+
