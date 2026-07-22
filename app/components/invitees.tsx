@@ -1,17 +1,17 @@
 import Image, { type StaticImageData } from "next/image";
 
-import ciscoAndKara from "../../Photos/CiscoAndKara.jpg";
-import evanAndErin from "../../Photos/EvanAndErin.jpg";
-import greg from "../../Photos/Greg.jpg";
-import jason from "../../Photos/Jason.jpeg";
-import juli from "../../Photos/Juli.jpg";
-import kelly from "../../Photos/Kelly.jpg";
-import leo from "../../Photos/Leo.jpg";
-import luca from "../../Photos/Luca.jpg";
-import matthew from "../../Photos/Me.jpg";
-import michael from "../../Photos/Michael.jpg";
-import samAndTaylor from "../../Photos/SamandTaylor.jpg";
-import tallon from "../../Photos/Tallon.jpg";
+import ciscoAndKara from "../../Photos/WebpInvitees/CiscoAndKara.webp";
+import evanAndErin from "../../Photos/WebpInvitees/EvanAndErin.webp";
+import greg from "../../Photos/WebpInvitees/Greg.webp";
+import jason from "../../Photos/WebpInvitees/Jason.webp";
+import juli from "../../Photos/WebpInvitees/Juli.webp";
+import kelly from "../../Photos/WebpInvitees/Kelly.webp";
+import leo from "../../Photos/WebpInvitees/Leo.webp";
+import luca from "../../Photos/WebpInvitees/Luca.webp";
+import matthew from "../../Photos/WebpInvitees/Me.webp";
+import michael from "../../Photos/WebpInvitees/Michael.webp";
+import samAndTaylor from "../../Photos/WebpInvitees/SamandTaylor.webp";
+import tallon from "../../Photos/WebpInvitees/Tallon.webp";
 
 type Invitee = {
   name: string;

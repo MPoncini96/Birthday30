@@ -1,7 +1,7 @@
 import type { StaticImageData } from "next/image";
 
 import unionOne from "../../Photos/UnionRes/Union1.webp";
-import unionThree from "../../Photos/UnionRes/union3.jpg";
+import unionThree from "../../Photos/UnionRes/union3.webp";
 import unionFive from "../../Photos/UnionRes/Union5.webp";
 import unionSix from "../../Photos/UnionRes/Union6.webp";
 
@@ -28,3 +28,4 @@ export const unionSlides: UnionSlide[] = [
     alt: "Union Reservoir weekend adventure view"
   }
 ];
+

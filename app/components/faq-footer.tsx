@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "What time should I arrive?",
     answer:
-      "Friday is the best. Tallon and I will be there earlier on Friday, since we don't work or anything crazy like that.  Some will be leaving early Saturday morning.  It's up to you when you want to arrive, but earlier the better!"
+      "Friday is the best. Tallon and I will be there earlier on Friday, since we don't work or anything crazy like that.  Some will be leaving early Saturday morning.  It's up to you when you want to arrive, but the earlier the better!"
   },
   {
     question: "What happens at night?",

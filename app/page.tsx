@@ -27,7 +27,7 @@ export default function Home() {
           <div className="hero__copy">
             <p className="eyebrow">Aug 7th to 9th</p>
             <h1>Union Reservoir Camping</h1>
-            <p className="intro">It is also my birthday. I am turning 30 August 8th!</p>
+            <p className="intro">It is also my birthday. I am celebrating 30 years of life on August 8th!</p>
           </div>
 
           <div className="hero__photo-wrap hero__photo-wrap--slideshow">
