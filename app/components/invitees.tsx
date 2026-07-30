@@ -57,8 +57,7 @@ const invitees: Invitee[] = [
   },
   {
     name: "Juli 🦎",
-    photo: juli2,
-    altPhoto: juli,
+    photo: juli,
     bio: "She has a PhD in animal stuff. She is our naturalist. She has dissected many lizards. Small ones too. Science isn't just in her nature, science is in nature in general, and Juli knows it. She hears the wolves howl in the middle of the night, and she knows what they are saying, thanks to her research. She's traveled the corners of the world and photographed its edges.",
     bioLink: { text: "@pugan_pics", url: "https://www.instagram.com/pugan_pics/" }
   },
@@ -82,7 +81,7 @@ const invitees: Invitee[] = [
     bio: "Sam — she's down for whatever, and whatever she's down for, she makes fun. Adventure finds her because she's always already halfway there. Knows how to crack a back, which sounds like a small thing until you're six miles in and your spine feels like a wet noodle — suddenly she's the most important person on the trip. Good energy, great company, will absolutely say yes before you finish the sentence. Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
   },
   {
-    name: "Verdot",
+    name: "Verdot 🌸",
     mediaSrc: "/gifs/Verdot.gif",
     bio: "She's a Bernese Mountain Dog puppy, all paws and running on a grand total of two brain cells — and both of them are currently dedicated to helping. Spotted a stick? She's on it. Someone has too much personal space? She's on that too. Tree ID skills: unclear. Emotional support and enthusiastic supervision skills: unmatched. She may not know what a hike is, but she will absolutely walk the entire thing sideways, tail wagging, fully convinced she is the one keeping everyone safe. And honestly? Who's to say she isn't."
   },

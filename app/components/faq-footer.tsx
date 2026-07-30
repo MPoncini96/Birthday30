@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "How much money do I owe Ponce?",
     answer:
-      "That is a great question. The campsites were $120 total. Feel free to send me whatever the split is after the trip"
+      "That is a great question. The campsites were $120 total. Feel free to send me whatever the split is after the trip.  UPDATE: Evan says I am being weird about this.  If you don't want to send me $10, you don't have to. I mean, what's $10 really? It's the amount you can keep or give away, and you won't ever really notice that it's gone."
   }
 ];
 
