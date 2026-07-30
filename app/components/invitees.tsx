@@ -43,7 +43,7 @@ const invitees: Invitee[] = [
     bio: "Let's face it, she's a princess. But not the type of princess that wants to be pampered all day, although, she will allow that some of the time. She's the princess that doesn't need a prince to fight a dragon for her, because she loves dragons and will become its master on her own. She's mostly a princess because she's the prettiest girl in the movie, and that's usually who the princess is. Kinda like Braveheart. She can do outdoors, she can do camping, she will make a better smore than anyone. She knows how to have a good time, she knows how to live."
   },
   {
-    name: "Cisco & Kara 🍇⚾",
+    name: "Cisco ⚾ & Kara 🍇",
     photo: ciscoAndKara,
     featured: true,
     bio: "Some sort of love. Cisco loves Kara and Kara loves Cisco. I was there the day they met and I saw it in their eyes. Fast forward 5 years, they are celebrating their fourth year of marriage this August. Stoked on that. They have a pup, a condo, and a tesla. Can they handle the outdoors? Live a weekend in a tent? Time will tell. But one thing is for sure, God is on their side. They have heart. That goes a long way in the wilderness."
@@ -62,23 +62,23 @@ const invitees: Invitee[] = [
     bioLink: { text: "@pugan_pics", url: "https://www.instagram.com/pugan_pics/" }
   },
   {
-    name: "Evan & Erin 🏴󠁧󠁢󠁥󠁮󠁧󠁿🍺",
+    name: "Evan 🍺 & Erin ☕",
     photo: evanAndErin,
     featured: true,
     bio: "He was a boy. She was a girl. Can I make it anymore obvious? He likes money. She likes plants. He likes Pokemon, she likes arts and crafts. They both like board games. I would say they let each other win all the time, but only one of them does that for the other. I'm kidding, but also, I'm kidding about kidding. I swear Erin lets Evan win sometimes, I'm calling that out. But enough, enough. They love the outdoors. The sun, the lake, nature's beauty. They are great company, and did I mention, they have a dog."
   },
   {
-    name: "Michael",
+    name: "Michael 🦦",
     photo: michael,
     bio: "Michael aspires to live in the woods and loves getting into deep convos in the outdoors. His favorite backpacking food is peanut butter."
   },
   {
-    name: "Sam & Taylor 🍷🌲",
+    name: "Sam 🍷 & Taylor🌲",
     photo: samAndTaylor,
     photoPosition: "center top",
     photoClassName: "invitee-card__photo--top-focus",
     featured: true,
-    bio: "Sam — she's down for whatever, and whatever she's down for, she makes fun. Adventure finds her because she's always already halfway there. Knows how to crack a back, which sounds like a small thing until you're six miles in and your spine feels like a wet noodle — suddenly she's the most important person on the trip. Good energy, great company, will absolutely say yes before you finish the sentence. Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
+    bio: "Sam: she's down for whatever, need your back cracked? She knows how to do it, and well.  It's part of her job. Adventure finds her because she's already halfway there. Good energy, great company, she's full of life.  She knows how to paint by the numbers. Overall, a good time. Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
   },
   {
     name: "Verdot 🌸",
@@ -94,17 +94,17 @@ const invitees: Invitee[] = [
     name: "Leo 🦴",
     photo: leo,
     photoScale: 1.32,
-    bio: "In a past life, Leo summited Everest. Twice. The first time was for glory. The second time was for a woman named Helga, who was waiting at base camp with a thermos of hot cocoa and eyes like the Himalayas. She wasn't the first. There was Marguerite, who he met on the north face in a snowstorm. And Yuki, who taught him to read the wind. And a Swedish cartographer whose name he never learned but whose laugh he never forgot. They all loved him, and he loved the mountain, and somehow that was enough. He descended for the last time in 1987, hung up his crampons, and was reborn as Leo. He doesn't remember any of it. But watch him on a trail sometime. The way he moves uphill like he's done it a thousand times. He has."
+    bio: "In a past life, Leo summited Everest. Twice. The first time was for glory. The second time was for a woman named Helga, who was waiting at base camp with a thermos of hot cocoa and eyes like the Himalayas. She wasn't the first. There was Marguerite, who he met on the north face in a snowstorm. And Yuki, who taught him to read the wind. And a Swedish cartographer whose name he never learned but whose laugh he never forgot. They all loved him, and he loved the mountain, and somehow that was enough. He descended for the last time in 1987, hung up his crampons, and was reborn as Leo, a white fluffball.  He now spends his time keeping Kara and Cisco attentive to his needs."
   },
   {
     name: "Luca 🥩",
     photo: luca,
-    bio: "In a past life, Luca was an inventor and a field medic — a dangerous combination. He built a device in 1843 that could reset a dislocated shoulder using only a leather strap and a pulley system he machined himself in a barn outside Florence. It worked every time. His lover, a man named Raffaele, was his first patient and his last. Raffaele had fallen from a horse and Luca had put him back together piece by piece, and somewhere between the splint and the fever breaking, something happened. They spent eleven years together in a stone house by the river. Raffaele would bring him problems and Luca would invent solutions. A better lantern. A water filter made from river clay. A folding stretcher that fit on a mule. When Raffaele died of a winter that came too fast, Luca kept inventing, but it was quieter after that. He was reborn eventually, as Luca, who brings a full spice kit backpacking and makes shakshuka at 9,000 feet. Raffaele would have loved it."
+    bio: "In a past life, Luca was an inventor and a field medic — a dangerous combination. He built a device in 1843 that could reset a dislocated shoulder using only a leather strap and a pulley system he machined himself in a barn outside Florence. It worked every time. His lover, a man named Raffaele, was his first patient and his last. Raffaele had fallen from a horse and Luca had put him back together piece by piece, and somewhere between the splint and the fever breaking, something happened. They spent eleven years together in a stone house by the river. Raffaele would bring him problems and Luca would invent solutions. A better lantern. A water filter made from river clay. A folding stretcher that fit on a mule. When Raffaele died of a winter that came too fast, Luca kept inventing, but it was quieter after that, and in his sleep, Luca joined Raffaele in the great beyond. Luca was reborn eventually, as a dog. Evan's and Erin's chocolate lab."
   },
   {
     name: "Jason ⛰️",
     photo: jason,
-    bio: "Jason doesn't find adventure — adventure finds Jason, sizes him up, and decides it met its match. He's the guy who says yes before the plan is finished, who shows up to the trailhead already grinning, who treats a wrong turn like a plot twist instead of a problem. He has been to places most people only see in screensavers. He has camped in weather that had no business being camped in. He once free-soloed a decision to drive 14 hours on a whim and came back with stories that took three campfires to tell. The wilderness doesn't intimidate him. If anything, it respects him. And he respects it right back — which is why he always makes it home."
+    bio: "He knows not fear. But that doesn't mean, you shouldn't fear him."
   }
 ];
 
