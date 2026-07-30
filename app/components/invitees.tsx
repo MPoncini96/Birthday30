@@ -35,7 +35,7 @@ const invitees: Invitee[] = [
   {
     name: "Matthew 🔥",
     photo: matthew,
-    bio: "His best quality is being present. His second best quality is knowing the right things to say. He enlisted into the Army because he felt like it at the time. He enjoys the outdoors, and the outdoors enjoy him. He is pleasant. He smiles more when things aren't going well than when they are, because he likes himself a challenge. He enjoys camping. He enjoys his friends."
+    bio: "His best quality is being present. His second best quality is knowing the right things to say. He enlisted into the Army because he felt like it at the time. He enjoys the outdoors, and the outdoors enjoy him. He is pleasant. He likes himself a challenge. Not a stranger to danger. He enjoys his friends. He's simple, but not in a dumb way."
   },
   {
     name: "Tallon 👑",
