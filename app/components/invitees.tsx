@@ -28,43 +28,45 @@ type Invitee = {
   photoClassName?: string;
   featured?: boolean;
   bio?: string;
+  bioLink?: { text: string; url: string };
 };
 
 const invitees: Invitee[] = [
   {
-    name: "Matthew",
+    name: "Matthew 🔥",
     photo: matthew,
-    bio: "The birthday boy. Claims he \"just wants a chill trip\" but has definitely already packed a french press, a camp chess set, and a journal for Deep Thoughts. Has been known to give a 45-minute fireside speech about the importance of being present. Cried once at a sunset. Won't confirm or deny."
+    bio: "His best quality is being present. His second best quality is knowing the right things to say. He enlisted into the Army because he felt like it at the time. He enjoys the outdoors, and the outdoors enjoy him. He is pleasant. He smiles more when things aren't going well than when they are, because he likes himself a challenge. He enjoys camping. He enjoys his friends."
   },
   {
-    name: "Tallon",
+    name: "Tallon 👑",
     photo: tallon,
-    bio: "Arrived at base camp with a single drawstring bag and no rain gear. Somehow always the most comfortable person there. Once slept through a bear incident and woke up asking if breakfast was ready. Unofficially holds the group record for most s'mores consumed in a single sitting (eleven, if you're counting — and he was not)."
+    bio: "Let's face it, she's a princess. But not the type of princess that wants to be pampered all day, although, she will allow that some of the time. She's the princess that doesn't need a prince to fight a dragon for her, because she loves dragons and will become its master on her own. She's mostly a princess because she's the prettiest girl in the movie, and that's usually who the princess is. Kinda like Braveheart. She can do outdoors, she can do camping, she will make a better smore than anyone. She knows how to have a good time, she knows how to live."
   },
   {
-    name: "Cisco & Kara",
+    name: "Cisco & Kara 🍇⚾",
     photo: ciscoAndKara,
     featured: true,
-    bio: "The power couple who show up with a two-person sleeping bag, a bluetooth speaker loaded with \"hiking bangers,\" and enough snacks to outlast a siege. Kara once talked Cisco out of a wrong trail turn using only vibes and a compass she'd never used before. It worked. They bicker about tent setup in a way that is honestly very entertaining for everyone else."
+    bio: "Some sort of love. Cisco loves Kara and Kara loves Cisco. I was there the day they met and I saw it in their eyes. Fast forward 5 years, they are celebrating their fourth year of marriage this August. Stoked on that. They have a pup, a condo, and a tesla. Can they handle the outdoors? Live a weekend in a tent? Time will tell. But one thing is for sure, God is on their side. They have heart. That goes a long way in the wilderness."
   },
   {
-    name: "Greg",
-    photo: greg,
-    altPhoto: greg2,
+    name: "Greg ⚔️",
+    photo: greg2,
+    altPhoto: greg,
     photoPosition: "30% center",
-    bio: "Brought a hammock on a trip with zero trees. Adapted by attempting to string it between two other hikers. This did not work. Spends the first hour of every hike loudly declaring he \"doesn't need trekking poles\" and the last hour quietly asking to borrow someone's. Will absolutely catch a fish. Will absolutely not stop talking about catching that fish."
+    bio: "Ayo. He's well read, and well practiced. He's better at making cocktails than anyone. He sure as heck knows how to host. He's fast. If you are with him and a bear is chasing you and Greg, you don't need to outrun the bear, you need to outrun Greg, which you can't, so just face it. You are dinner for that bear, or breakfast if he hasn't ate yet. Why? Cause Greg was faster than you and you should have been more prepared."
   },
   {
-    name: "Juli",
-    photo: juli,
-    altPhoto: juli2,
-    bio: "Showed up to a winter camping trip with a summer sleeping bag and the confidence of someone who had never been cold before. Survived entirely on borrowed gear and sheer stubbornness. Makes the best camp coffee of anyone in the group — secret ingredient is apparently \"not measuring anything.\" Once identified a bird call that turned out to be Luca doing a bit."
+    name: "Juli 🦎",
+    photo: juli2,
+    altPhoto: juli,
+    bio: "She has a PhD in animal stuff. She is our naturalist. She has dissected many lizards. Small ones too. Science isn't just in her nature, science is in nature in general, and Juli knows it. She hears the wolves howl in the middle of the night, and she knows what they are saying, thanks to her research. She's traveled the corners of the world and photographed its edges.",
+    bioLink: { text: "@pugan_pics", url: "https://www.instagram.com/pugan_pics/" }
   },
   {
-    name: "Evan & Erin",
+    name: "Evan & Erin 🏴󠁧󠁢󠁥󠁮󠁧󠁿🍺",
     photo: evanAndErin,
     featured: true,
-    bio: "Evan plans the route. Erin questions the route. Evan defends the route. Erin is right about the route. They have done this on every single trip and it has somehow always ended fine, which only encourages both of them. Collectively responsible for the group's best campfire meal (foil packet potatoes, don't ask, just trust) and also the group's worst navigation decision, which they have agreed to never speak of again."
+    bio: "He was a boy. She was a girl. Can I make it anymore obvious? He likes money. She likes plants. He likes Pokemon, she likes arts and crafts. They both like board games. I would say they let each other win all the time, but only one of them does that for the other. I'm kidding, but also, I'm kidding about kidding. I swear Erin lets Evan win sometimes, I'm calling that out. But enough, enough. They love the outdoors. The sun, the lake, nature's beauty. They are great company, and did I mention, they have a dog."
   },
   {
     name: "Michael",
@@ -72,12 +74,12 @@ const invitees: Invitee[] = [
     bio: "Michael aspires to live in the woods and loves getting into deep convos in the outdoors. His favorite backpacking food is peanut butter."
   },
   {
-    name: "Sam & Taylor",
+    name: "Sam & Taylor 🍷🌲",
     photo: samAndTaylor,
     photoPosition: "center top",
     photoClassName: "invitee-card__photo--top-focus",
     featured: true,
-    bio: "Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
+    bio: "Sam — she's down for whatever, and whatever she's down for, she makes fun. Adventure finds her because she's always already halfway there. Knows how to crack a back, which sounds like a small thing until you're six miles in and your spine feels like a wet noodle — suddenly she's the most important person on the trip. Good energy, great company, will absolutely say yes before you finish the sentence. Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
   },
   {
     name: "Verdot",
@@ -85,29 +87,29 @@ const invitees: Invitee[] = [
     bio: "She's a Bernese Mountain Dog puppy, all paws and running on a grand total of two brain cells — and both of them are currently dedicated to helping. Spotted a stick? She's on it. Someone has too much personal space? She's on that too. Tree ID skills: unclear. Emotional support and enthusiastic supervision skills: unmatched. She may not know what a hike is, but she will absolutely walk the entire thing sideways, tail wagging, fully convinced she is the one keeping everyone safe. And honestly? Who's to say she isn't."
   },
   {
-    name: "Kelly",
+    name: "Kelly ⛷️",
     photo: kelly,
-    bio: "Has a sixth sense for finding the one flat tent spot in any campsite. Also has a first sense, second sense, and third sense for knowing when someone else got a better flat spot. Once reorganized the entire bear canister mid-hike because \"the weight distribution was off\" and everyone had to stop for 20 minutes, but honestly? She was right. Responsible for group morale via strategic deployment of emergency gummy bears."
+    bio: "He smiles like a retriever. He's loyal like a lab. He's playful like a puppy. Let's face it, this guy is a dog. Woof! Woof! Now you are speaking Kelly's language. He runs up and down the mountain like a hound dog. He can fish, he can ski, he can hold a conversation. He's done the research. He is an asset. He's not just a dog, he's an outdoors man."
   },
   {
-    name: "Leo",
+    name: "Leo 🦴",
     photo: leo,
     photoScale: 1.32,
-    bio: "Committed outdoorsman who insists every hike is \"totally doable\" and \"not that much elevation.\" It is always that much elevation. Once led the group on a \"shortcut\" that added four miles and a river crossing nobody was prepared for. Described it afterward as a \"bonus adventure.\" Genuinely cannot read a topo map but will hold it very confidently. The group loves him anyway."
+    bio: "In a past life, Leo summited Everest. Twice. The first time was for glory. The second time was for a woman named Helga, who was waiting at base camp with a thermos of hot cocoa and eyes like the Himalayas. She wasn't the first. There was Marguerite, who he met on the north face in a snowstorm. And Yuki, who taught him to read the wind. And a Swedish cartographer whose name he never learned but whose laugh he never forgot. They all loved him, and he loved the mountain, and somehow that was enough. He descended for the last time in 1987, hung up his crampons, and was reborn as Leo. He doesn't remember any of it. But watch him on a trail sometime. The way he moves uphill like he's done it a thousand times. He has."
   },
   {
-    name: "Luca",
+    name: "Luca 🥩",
     photo: luca,
-    bio: "Brings a full spice kit backpacking. Not a little pouch — a kit, with labeled jars, a tiny whisk, and a fold-out cutting board. Once made shakshuka at 9,000 feet on a backpacking stove. The group has never fully recovered from how good it was. Also somehow always the first one asleep and the last one anyone hears snoring. Science cannot explain this."
+    bio: "In a past life, Luca was an inventor and a field medic — a dangerous combination. He built a device in 1843 that could reset a dislocated shoulder using only a leather strap and a pulley system he machined himself in a barn outside Florence. It worked every time. His lover, a man named Raffaele, was his first patient and his last. Raffaele had fallen from a horse and Luca had put him back together piece by piece, and somewhere between the splint and the fever breaking, something happened. They spent eleven years together in a stone house by the river. Raffaele would bring him problems and Luca would invent solutions. A better lantern. A water filter made from river clay. A folding stretcher that fit on a mule. When Raffaele died of a winter that came too fast, Luca kept inventing, but it was quieter after that. He was reborn eventually, as Luca, who brings a full spice kit backpacking and makes shakshuka at 9,000 feet. Raffaele would have loved it."
   },
   {
-    name: "Jason",
+    name: "Jason ⛰️",
     photo: jason,
-    bio: "Self-described \"light packer\" who shows up with a 55-liter pack stuffed to the zipper. Contents are always a mystery. Once pulled a full-size cutting board out of it like a magician. Knows exactly one campfire song — \"Take Me Home, Country Roads\" — but performs it with such conviction that no one has ever asked for anything else. Somehow always has cell service when no one else does."
+    bio: "Jason doesn't find adventure — adventure finds Jason, sizes him up, and decides it met its match. He's the guy who says yes before the plan is finished, who shows up to the trailhead already grinning, who treats a wrong turn like a plot twist instead of a problem. He has been to places most people only see in screensavers. He has camped in weather that had no business being camped in. He once free-soloed a decision to drive 14 hours on a whim and came back with stories that took three campfires to tell. The wilderness doesn't intimidate him. If anything, it respects him. And he respects it right back — which is why he always makes it home."
   }
 ];
 
-function InviteeBio({ bio }: { bio: string }) {
+function InviteeBio({ bio, bioLink }: { bio: string; bioLink?: { text: string; url: string } }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -116,6 +118,19 @@ function InviteeBio({ bio }: { bio: string }) {
         className={`invitee-card__bio-text${expanded ? " invitee-card__bio-text--expanded" : ""}`}
       >
         {bio}
+        {bioLink && (
+          <>
+            {" "}
+            <a
+              className="invitee-card__bio-link"
+              href={bioLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {bioLink.text}
+            </a>
+          </>
+        )}
       </p>
       <button
         className="invitee-card__bio-toggle"
@@ -179,7 +194,7 @@ function InviteeCard({ invitee }: { invitee: Invitee }) {
             </button>
           </div>
         )}
-        {invitee.bio && <InviteeBio bio={invitee.bio} />}
+        {invitee.bio && <InviteeBio bio={invitee.bio} bioLink={invitee.bioLink} />}
       </div>
     </article>
   );
