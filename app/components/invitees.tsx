@@ -18,6 +18,8 @@ import tallon from "../../Photos/WebpInvitees/Tallon.webp";
 import greg2 from "../../Photos/WebpInvitees/Greg2.webp";
 import juli2 from "../../Photos/WebpInvitees/Juli2.webp";
 
+type SplitBioEntry = { name: string; text: string };
+
 type Invitee = {
   name: string;
   photo?: StaticImageData;
@@ -29,6 +31,7 @@ type Invitee = {
   featured?: boolean;
   bio?: string;
   bioLink?: { text: string; url: string };
+  splitBio?: SplitBioEntry[];
 };
 
 const invitees: Invitee[] = [
@@ -78,7 +81,16 @@ const invitees: Invitee[] = [
     photoPosition: "center top",
     photoClassName: "invitee-card__photo--top-focus",
     featured: true,
-    bio: "Sam: she's down for whatever, need your back cracked? She knows how to do it, and well.  It's part of her job. Adventure finds her because she's already halfway there. Good energy, great company, she's full of life.  She knows how to paint by the numbers. Overall, a good time. Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
+    splitBio: [
+      {
+        name: "Sam",
+        text: "She's down for whatever, need your back cracked? She knows how to do it, and well. It's part of her job. Adventure finds her because she's already halfway there. Good energy, great company, she's full of life. She knows how to paint by the numbers. Overall, a good time."
+      },
+      {
+        name: "Taylor",
+        text: "Professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
+      }
+    ]
   },
   {
     name: "Verdot 🌸",
@@ -107,6 +119,35 @@ const invitees: Invitee[] = [
     bio: "He knows not fear. But that doesn't mean, you shouldn't fear him."
   }
 ];
+
+function SplitInviteeBio({ entries }: { entries: SplitBioEntry[] }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="invitee-card__bio">
+      <div
+        className={`invitee-card__split-bio${expanded ? " invitee-card__split-bio--expanded" : ""}`}
+      >
+        {entries.map((entry) => (
+          <div key={entry.name} className="invitee-card__split-bio-col">
+            <p className="invitee-card__bio-text invitee-card__bio-text--expanded">
+              <strong>{entry.name}</strong>
+              {": "}
+              {entry.text}
+            </p>
+          </div>
+        ))}
+      </div>
+      <button
+        className="invitee-card__bio-toggle"
+        onClick={() => setExpanded((v) => !v)}
+        aria-expanded={expanded}
+      >
+        {expanded ? "View less" : "View more"}
+      </button>
+    </div>
+  );
+}
 
 function InviteeBio({ bio, bioLink }: { bio: string; bioLink?: { text: string; url: string } }) {
   const [expanded, setExpanded] = useState(false);
@@ -193,7 +234,10 @@ function InviteeCard({ invitee }: { invitee: Invitee }) {
             </button>
           </div>
         )}
-        {invitee.bio && <InviteeBio bio={invitee.bio} bioLink={invitee.bioLink} />}
+        {invitee.splitBio
+          ? <SplitInviteeBio entries={invitee.splitBio} />
+          : invitee.bio && <InviteeBio bio={invitee.bio} bioLink={invitee.bioLink} />
+        }
       </div>
     </article>
   );

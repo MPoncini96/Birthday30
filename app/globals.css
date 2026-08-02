@@ -683,6 +683,24 @@ body.page-is-loading {
   margin-top: 0.5rem;
 }
 
+/* Split bio (two-column layout for cards like Sam & Taylor) */
+.invitee-card__split-bio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-height: 4.65rem; /* ~3 lines at 0.88rem × 1.55 lh */
+  overflow: hidden;
+}
+
+.invitee-card__split-bio--expanded {
+  max-height: none;
+  overflow: visible;
+}
+
+.invitee-card__split-bio-col {
+  min-width: 0;
+}
+
 .invitee-card__bio-text {
   margin: 0;
   font-size: 0.88rem;
