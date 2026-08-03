@@ -20,6 +20,16 @@ const faqs = [
       "Yes. Encouraged.  Hoping Evan brings his kayak.  If not, he should let me know and I can see what I can do."
   },
   {
+    question: "Are there bear lockers?",
+    answer:
+      "Yes."
+  },
+  {
+    question: "Will there be water at the campsite?",
+    answer:
+      "No, bring gallons of drinking water to the campsite. Water spout is located near the campsite, but not on the campsite."
+  },
+  {
     question: "What time should I arrive?",
     answer:
       "Friday is the best. Tallon and I will be there earlier on Friday, since we don't work or anything crazy like that.  Some will be leaving early Saturday morning.  It's up to you when you want to arrive, but the earlier the better!"
@@ -56,4 +66,5 @@ export function FaqFooter() {
     </section>
   );
 }
+
 
