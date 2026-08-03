@@ -647,6 +647,7 @@ body.page-is-loading {
 .invitee-card__photo-wrap {
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  position: relative;
 }
 
 .invitee-card--featured .invitee-card__photo-wrap {
@@ -662,6 +663,26 @@ body.page-is-loading {
 
 .invitee-card__photo--top-focus {
   object-position: center top !important;
+}
+
+.invitee-card__photo--not-going {
+  filter: grayscale(60%) brightness(0.75);
+}
+
+.invitee-card__not-going-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.invitee-card__not-going-x {
+  width: 55%;
+  height: 55%;
+  drop-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55));
 }
 
 .invitee-card__content {
@@ -681,24 +702,6 @@ body.page-is-loading {
 /* Bio expand/collapse */
 .invitee-card__bio {
   margin-top: 0.5rem;
-}
-
-/* Split bio (two-column layout for cards like Sam & Taylor) */
-.invitee-card__split-bio {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  max-height: 4.65rem; /* ~3 lines at 0.88rem × 1.55 lh */
-  overflow: hidden;
-}
-
-.invitee-card__split-bio--expanded {
-  max-height: none;
-  overflow: visible;
-}
-
-.invitee-card__split-bio-col {
-  min-width: 0;
 }
 
 .invitee-card__bio-text {

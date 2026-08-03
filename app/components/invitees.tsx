@@ -18,8 +18,6 @@ import tallon from "../../Photos/WebpInvitees/Tallon.webp";
 import greg2 from "../../Photos/WebpInvitees/Greg2.webp";
 import juli2 from "../../Photos/WebpInvitees/Juli2.webp";
 
-type SplitBioEntry = { name: string; text: string };
-
 type Invitee = {
   name: string;
   photo?: StaticImageData;
@@ -31,7 +29,7 @@ type Invitee = {
   featured?: boolean;
   bio?: string;
   bioLink?: { text: string; url: string };
-  splitBio?: SplitBioEntry[];
+  notGoing?: boolean;
 };
 
 const invitees: Invitee[] = [
@@ -81,16 +79,7 @@ const invitees: Invitee[] = [
     photoPosition: "center top",
     photoClassName: "invitee-card__photo--top-focus",
     featured: true,
-    splitBio: [
-      {
-        name: "Sam",
-        text: "She's down for whatever, need your back cracked? She knows how to do it, and well. It's part of her job. Adventure finds her because she's already halfway there. Good energy, great company, she's full of life. She knows how to paint by the numbers. Overall, a good time."
-      },
-      {
-        name: "Taylor",
-        text: "Professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
-      }
-    ]
+    bio: "Sam: she's down for whatever, need your back cracked? She knows how to do it, and well.  It's part of her job. Adventure finds her because she's already halfway there. Good energy, great company, she's full of life.  She knows how to paint by the numbers. Overall, a good time. Taylor — professional tree hugger (literally, for science) and self-appointed camp naturalist. Can ID a tree from a single leaf but cannot, under any circumstances, accurately estimate how long a hike is. If she says \"quick little 2-miler,\" start planning your will. Will absolutely stop mid-trail to yell about banana slugs. 10/10 will keep you alive, 0/10 will get you back to camp on time."
   },
   {
     name: "Verdot 🌸",
@@ -100,6 +89,7 @@ const invitees: Invitee[] = [
   {
     name: "Kelly ⛷️",
     photo: kelly,
+    notGoing: true,
     bio: "He smiles like a retriever. He's loyal like a lab. He's playful like a puppy. Let's face it, this guy is a dog. Woof! Woof! Now you are speaking Kelly's language. He runs up and down the mountain like a hound dog. He can fish, he can ski, he can hold a conversation. He's done the research. He is an asset. He's not just a dog, he's an outdoors man."
   },
   {
@@ -119,35 +109,6 @@ const invitees: Invitee[] = [
     bio: "He knows not fear. But that doesn't mean, you shouldn't fear him."
   }
 ];
-
-function SplitInviteeBio({ entries }: { entries: SplitBioEntry[] }) {
-  const [expanded, setExpanded] = useState(false);
-
-  return (
-    <div className="invitee-card__bio">
-      <div
-        className={`invitee-card__split-bio${expanded ? " invitee-card__split-bio--expanded" : ""}`}
-      >
-        {entries.map((entry) => (
-          <div key={entry.name} className="invitee-card__split-bio-col">
-            <p className="invitee-card__bio-text invitee-card__bio-text--expanded">
-              <strong>{entry.name}</strong>
-              {": "}
-              {entry.text}
-            </p>
-          </div>
-        ))}
-      </div>
-      <button
-        className="invitee-card__bio-toggle"
-        onClick={() => setExpanded((v) => !v)}
-        aria-expanded={expanded}
-      >
-        {expanded ? "View less" : "View more"}
-      </button>
-    </div>
-  );
-}
 
 function InviteeBio({ bio, bioLink }: { bio: string; bioLink?: { text: string; url: string } }) {
   const [expanded, setExpanded] = useState(false);
@@ -195,7 +156,7 @@ function InviteeCard({ invitee }: { invitee: Invitee }) {
       <div className="invitee-card__photo-wrap">
         {activePhoto ? (
           <Image
-            className={`invitee-card__photo${invitee.photoClassName ? ` ${invitee.photoClassName}` : ""}`}
+            className={`invitee-card__photo${invitee.photoClassName ? ` ${invitee.photoClassName}` : ""}${invitee.notGoing ? " invitee-card__photo--not-going" : ""}`}
             src={activePhoto}
             alt={invitee.name}
             placeholder="blur"
@@ -207,10 +168,18 @@ function InviteeCard({ invitee }: { invitee: Invitee }) {
           />
         ) : (
           <img
-            className={`invitee-card__photo${invitee.photoClassName ? ` ${invitee.photoClassName}` : ""}`}
+            className={`invitee-card__photo${invitee.photoClassName ? ` ${invitee.photoClassName}` : ""}${invitee.notGoing ? " invitee-card__photo--not-going" : ""}`}
             src={invitee.mediaSrc}
             alt={invitee.name}
           />
+        )}
+        {invitee.notGoing && (
+          <div className="invitee-card__not-going-overlay" aria-label="Not attending">
+            <svg className="invitee-card__not-going-x" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="10" y1="10" x2="90" y2="90" stroke="#e52222" strokeWidth="14" strokeLinecap="round" />
+              <line x1="90" y1="10" x2="10" y2="90" stroke="#e52222" strokeWidth="14" strokeLinecap="round" />
+            </svg>
+          </div>
         )}
       </div>
       <div className="invitee-card__content">
@@ -234,10 +203,7 @@ function InviteeCard({ invitee }: { invitee: Invitee }) {
             </button>
           </div>
         )}
-        {invitee.splitBio
-          ? <SplitInviteeBio entries={invitee.splitBio} />
-          : invitee.bio && <InviteeBio bio={invitee.bio} bioLink={invitee.bioLink} />
-        }
+        {invitee.bio && <InviteeBio bio={invitee.bio} bioLink={invitee.bioLink} />}
       </div>
     </article>
   );
